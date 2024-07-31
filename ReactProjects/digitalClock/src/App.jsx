@@ -13,8 +13,8 @@ function App() {
   setInterval(() => {updateTime()}, 1000);
 
   const updateTime = useCallback(() => {
-    setHour((new Date().getUTCHours() + 5).toString().padStart(2, '0'));
-    setMinute((new Date().getUTCMinutes() + 30).toString().padStart(2, '0'));
+    setHour((new Date().getUTCHours()).toString().padStart(2, '0'));
+    setMinute((new Date().getUTCMinutes()).toString().padStart(2, '0'));
     setSecond((new Date().getUTCSeconds()).toString().padStart(2, '0'));
   }, [hour, minute, second,]);
 
